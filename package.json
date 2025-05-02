@@ -12,7 +12,7 @@
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
     "test:debug": "vitest --debug",
-    "test:cov:report": "vitest run --coverage --reporter=html"
+    "test:cov:report": "vitest run --coverage --reporter=clover"
   },
   "repository": {
     "type": "git",
