@@ -5,6 +5,6 @@ export const RL_DEFAULT_OPTIONS = {
 	mussurana: {
 		maxMemory: 10 * 1024 * 1024,
 		maxItems: 1000,
-		checkPeriod: 1000,
+		checkPeriod: 60000,
 	},
 }
