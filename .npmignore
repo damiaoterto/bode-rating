@@ -1,0 +1,7 @@
+coverage/
+.editorconfig
+biome.json
+tsconfig.build.json
+tsconfig.json
+vitest.config.ts
+webpack.config.js

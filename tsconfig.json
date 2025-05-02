@@ -22,5 +22,6 @@
         "@/*": ["./src/*"],
         "@test/*": ["./test/*"]
     }
-  }
+  },
+  "exclude": ["dist", "node_modules", "**/*.spec.ts", "vitest.config.ts"]
 }
