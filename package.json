@@ -11,12 +11,19 @@
     "type": "git",
     "url": "git+https://github.com/damiaoterto/bode-rating.git"
   },
-  "keywords": ["rating", "limit"],
+  "keywords": [
+    "rating",
+    "limit"
+  ],
   "author": "Francisco Damião Terto<contato@damiaoterto.dev>",
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/damiaoterto/bode-rating/issues"
   },
-  "homepage": "https://github.com/damiaoterto/bode-rating#readme"
+  "homepage": "https://github.com/damiaoterto/bode-rating#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  }
 }
