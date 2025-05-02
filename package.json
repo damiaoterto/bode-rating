@@ -8,7 +8,10 @@
     "prebuild": "rimraf dist",
     "build": "webpack --mode production --config webpack.config.js",
     "gen:types": "tsc --emitDeclarationOnly --sourceMap",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:debug": "vitest --debug",
+    "test:cov:report": "vitest run --coverage --reporter=html"
   },
   "repository": {
     "type": "git",
