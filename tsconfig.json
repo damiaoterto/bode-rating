@@ -18,5 +18,10 @@
     "strictPropertyInitialization": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-  }
+    "paths": {
+        "@/*": ["./src/*"],
+        "@test/*": ["./test/*"]
+    }
+  },
+  "exclude": ["vite.config.ts", "dist", "node_modules", "test"]
 }
