@@ -7,7 +7,7 @@ export default defineConfig({
 	test: {
 		coverage: {
 			provider: 'istanbul',
-			reporter: ['clover', 'html', 'lcov'],
+			reporter: ['clover', 'html'],
 			exclude: [
 				...configDefaults.exclude,
 				'**/node_modules/**',
