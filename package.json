@@ -1,7 +1,7 @@
 {
   "name": "bode-rating",
   "version": "1.0.0",
-  "description": "A Nest.js lib for rating limit",
+  "description": "A Express middleware for rating limit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
     "test:debug": "vitest --debug",
-    "test:cov:report": "vitest run --coverage --reporter=html"
+    "test:cov:report": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
