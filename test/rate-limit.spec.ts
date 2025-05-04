@@ -108,4 +108,33 @@ describe('RateLimit', () => {
 		expect(response.headers['x-ratelimit-remaining']).toBe('5')
 		expect(response.body).toMatchObject(resultMock)
 	})
+
+	it('should change cache engine options', async () => {
+		const mussurana = {
+			maxMemory: 100 * 1024,
+			maxItems: 100,
+			checkPeriod: 60000,
+		}
+
+		// set global middleware
+		app?.use(rating({ max: 10, mussurana }))
+
+		// create test rote
+		app?.get('/test', (req: Request, res: Response) => {
+			res.json(resultMock)
+		})
+
+		// send 10 request to to achieve the maximum
+		const requests = Array.from({ length: 10 }).map(async () => {
+			await request(app).get('/test')
+		})
+
+		await Promise.all(requests)
+		// send 1 more request to return error
+		const response = await request(app).get('/test')
+
+		expect(response.status).toBe(429)
+		expect(response.body.success).toBeFalsy()
+		expect(response.body.message).toBe('Too many requests, please try again later.')
+	})
 })
