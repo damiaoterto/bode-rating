@@ -11,6 +11,7 @@ export default defineConfig({
 			exclude: [
 				...configDefaults.exclude,
 				'**/node_modules/**',
+				'**/*.mock.ts',
 				'./src/index.ts',
 				'./src/**/*.interface.ts',
 			],
